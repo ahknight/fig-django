@@ -17,7 +17,9 @@ Very few.  By default it presumes your Django project is using either South prio
 
 ## Setup
 
-NOTE: The `manage.py` and `requirements.txt` files are expected to be in `app`.  If that doesn't work for you, poke around `app/DockerStart.sh` and `app/Dockerfile` for the places to change that.
+The `manage.py` and `requirements.txt` files are expected to be in `app`.  If that doesn't work for you, poke around `app/DockerStart.sh` and `app/Dockerfile` for the places to change that.
+
+There is a demonstation Django 1.7 app in `app` already so this so you can technically run `fig up` without anything else just to see it work, but you might want to use this with a real application eventually, so here's how:
 
 1. Checkout a copy of this and `cd` into it.
 2. Either run `django-admin.py startproject [projectname] app` or checkout an existing project into `app`.   

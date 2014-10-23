@@ -4,7 +4,7 @@ app:
   build: app/
   command: /bin/sh DockerStart.sh
   environment:
-    DJANGO_SETTINGS_MODULE: APPNAME.settings
+    DJANGO_SETTINGS_MODULE: test_app.settings
   volumes:
     - app/:/app
   ports:
