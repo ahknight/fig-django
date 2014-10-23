@@ -1,0 +1,21 @@
+db:
+  image: postgres:9.3
+app:
+  build: app/
+  command: /bin/sh DockerStart.sh
+  environment:
+    DJANGO_SETTINGS_MODULE: APPNAME.settings
+  volumes:
+    - app/:/app
+  ports:
+    - "8000:8000"
+  links:
+    - db
+web:
+  build: web/
+  links:
+    - app
+  volumes_from:
+    - app
+  ports:
+    - "80:80"
